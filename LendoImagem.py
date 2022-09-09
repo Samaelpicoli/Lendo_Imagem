@@ -2,6 +2,7 @@
 import pyautogui
 import cv2
 import pytesseract
+import time
 
 #baixar o pytesseract na sua máquina e passar o caminho do executável
 pytesseract.pytesseract.tesseract_cmd = r"C:\Users\samael.picoli\Documents\tesseract\tesseract.exe"
@@ -24,3 +25,5 @@ img = cv2.imread("imagem.png") #lê a foto
 res=pytesseract.image_to_string(img) #transforma em string 
 
 print(res)
+#caso for rodar no cmd (recomendável, para conseguir pegar a imagem em outras janelas, colocar um time)
+#time.sleep(100)
